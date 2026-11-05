@@ -1,0 +1,133 @@
+<args format="1.0">
+    <shaderType>
+        <tag value="bxdf"/>
+    </shaderType>
+    <param name="baseColor" type="color" default="0.8 0.8 0.8" label="Base Color" widget="color" connectable="True">
+    	<tags>
+            <tag value="color"/>
+        </tags>
+        <help>
+            The base color of the surface.
+        </help>
+    </param>
+    <param name="shadowColor" type="color" default="0.2 0.2 0.2" label="Shadow Color" widget="color" connectable="True">
+        <tags>
+            <tag value="color"/>
+        </tags>
+        <help>
+            The color for shadowed areas.
+        </help>
+    </param>
+    <param name="shadowLevels" type="float" default="3" label="Shadow Levels" widget="slider" min="1" max="10" connectable="True">
+        <help>
+            Number of quantization levels for shadows.
+        </help>
+    </param>
+    <param name="shadowOpacity" type="float" default="1.0" label="Shadow Opacity" widget="slider" min="0.0" max="1.0" connectable="True">
+        <help>
+        	translucency of shadows.
+        </help>
+    </param>
+    <param name="sssEnabled" type="int" default="0" label="Enable SSS" widget="checkBox" connectable="True">
+        <help>
+            Enable subsurface scattering.
+        </help>
+    </param>
+    <param name="sssopacity" type="float" default="1" label="SSS Opacity" widget="slider" min="0" max="1" connectable="True">
+        <help>
+            how much SSS you would like to show up.
+        </help>
+    </param>
+    <param name="sssColor" type="color" default="1. 1. 1." label="SSS Color" widget="color" connectable="True">
+        <tags>
+            <tag value="color"/>
+        </tags>
+        <help>
+            Color for subsurface scattering.
+        </help>
+    </param>
+    <param name="sssior" type="float" default="1.394" label="SSS IOR" widget="slider" min="0.0" max="3" connectable="False">
+        <help>
+            subsurface scattering index of refraction
+        </help>
+    </param>
+    <param name="sssanisotropy" type="float" default="0" label="Anisotropy" widget="slider" min="0" max="1" connectable="True">
+        <help>
+            subsurface scattering tangent direction
+        </help>
+    </param>
+    <param name="sssdiffuseSwitch" type="float" default="1" label="diffuse switch" widget="slider" min="0" connectable="False">
+        <help>
+            switch between subsurface scattering and diffuse
+        </help>
+    </param>
+    <param name="sssbias" type="float" default="1" label="Bias" widget="slider" min="0.00001" connectable="False">
+        <help>
+            subsurface scattering transmition gain
+        </help>
+    </param>
+    <param name="sssresolveSI" type="int" default="0" label="SSS self-intersect" widget="checkBox" connectable="False">
+        <help>
+            solving self intersect of subsurface scattering
+        </help>
+    </param>
+    <param name="sssinternalRETA" type="float" default="0" label="SSS bleeding" widget="slider" min="0" max="1" connectable="False">
+        <help>
+            extra color bleed of subsurface scattering
+        </help>
+    </param>
+    <param name="unitLength" type="float" default="0" label="SSS unit count(multiplier to the color)" widget="slider" min="0.00001" connectable="False">
+        <help>
+            unit of the model that raytracing happens in
+        </help>
+    </param>
+    <param name="sssdbl" type="int" default="0" label="SSS double sided" widget="checkBox" connectable="False">
+        <help>
+            counting both sides of normals
+        </help>
+    </param>
+    <param name="lineEnabled" type="int" default="0" label="Enable sharp Lines" widget="checkBox" connectable="False">
+        <help>
+            Enable lineart stylization.
+        </help>
+    </param>
+    <param name="linesharpdegree" type="float" default="23" label="Degree of sharpness" widget="slider" min="0" max="180" connectable="True">
+        <help>
+            how much degree of change would count as sharpness for line art stylization
+        </help>
+    </param>
+    <param name="silhouetteEnabled" type="int" default="0" label="Enable Silhouette Lines" widget="checkBox" connectable="False">
+        <help>
+            Enable lineart stylization.
+        </help>
+    </param>
+    <param name="silhouetteAM" type="float" default="0.5" label="spread of silhoutte" widget="slider" min="0" max="1" connectable="True">
+        <help>
+            how much silhoutte spreads throughout the object
+        </help>
+    </param>
+    <param name="minsilhouetteAM" type="float" default="0" label="spread of silhoutte" widget="slider" min="0" max="1" connectable="True">
+        <help>
+            minimum of spread, it's for reducing the error rate of silhoutte calculations
+        </help>
+    </param>
+    <param name="linecolor" type="color" default="0. 0. 0." label="Line Color" widget="color" connectable="True">
+        <tags>
+            <tag value="color"/>
+        </tags>
+        <help>
+            Color of the line.
+        </help>
+    </param>
+    <param name="bumpNormal" label="Bump Normal" type="normal" default="0 0 0" readOnly="True">
+        <tags>
+            <tag value="normal"/>
+        </tags>
+        <help>
+        An optional connection point for bumped normals.
+        </help>
+    </param>
+    <rfmdata nodeid="32510203040" classification="shader/surface:rendernode/RenderMan/bxdf/Pixar:swatch/rmanSwatch"/>
+    <rfhdata classification="BxDF"/>
+    <rfcdata nodeid="325102030" description="Mtoon"/>
+</args>
